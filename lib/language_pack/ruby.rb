@@ -166,6 +166,7 @@ WARNING
   end
 
   def cleanup
+    run!("sed -i 's|#{build_path}|/app|' .bundle/plugin/index")
   end
 
   def config_detect
